@@ -56,7 +56,7 @@ namespace TravisCILab
         }
 
          [Test]
-        public void Add_Valid()
+        public void Mult_Valid()
         {
             Assert.AreEqual(2, Program.Multiply("1", "2"));
             Assert.AreEqual(6, Program.Multiply("3", "2"));
@@ -80,7 +80,7 @@ namespace TravisCILab
         }
 
          [Test]
-        public void Mult_Valid()
+        public void Div_Valid()
         {
             Assert.AreEqual(0.5, Program.Divide("1", "2"));
             Assert.AreEqual(1.5, Program.Divide("3", "2"));
@@ -88,7 +88,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void Div_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
             Assert.Throws<FormatException>(() => Program.Divide("a", "1"));
@@ -96,7 +96,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Null()
+        public void Div_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -104,7 +104,7 @@ namespace TravisCILab
         }
 
          [Test]
-        public void Add_Valid()
+        public void Pow_Valid()
         {
             Assert.AreEqual(1, Program.Power("1", "2"));
             Assert.AreEqual(9, Program.Power("3", "2"));
@@ -112,7 +112,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void Pow_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
@@ -120,7 +120,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Null()
+        public void Pow_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
